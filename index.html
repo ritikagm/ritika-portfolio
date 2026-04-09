@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ritika G M | HCI MS Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -73,13 +74,13 @@ nav{
 .avatar-wrap{
   width:clamp(180px,20vw,250px);height:clamp(180px,20vw,250px);border-radius:50%;
   background:linear-gradient(135deg,var(--accent),var(--teal));
-  padding:3px;position:relative;
+  padding:3px;
 }
 .avatar-inner{
   width:100%;height:100%;border-radius:50%;background:var(--card);
   display:flex;align-items:center;justify-content:center;
-  font-size:clamp(50px,8vw,80px);
 }
+.avatar-inner i{font-size:clamp(60px,10vw,90px);background:linear-gradient(135deg,var(--accent2),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 
 /* SECTIONS */
 .sec{padding:80px 5%;max-width:1200px;margin:0 auto;}
@@ -94,10 +95,20 @@ nav{
 .about-cards{display:flex;flex-direction:column;gap:12px;}
 .acard{
   background:var(--card);border:1px solid var(--border);border-radius:12px;
-  padding:16px 18px;display:flex;align-items:center;gap:12px;transition:border-color .2s;
+  padding:16px 18px;display:flex;align-items:center;gap:14px;transition:border-color .2s;
 }
 .acard:hover{border-color:var(--accent2);}
-.acard-icon{font-size:20px;flex-shrink:0;}
+.acard-icon{
+  width:36px;height:36px;border-radius:8px;flex-shrink:0;
+  background:rgba(139,92,246,0.12);display:flex;align-items:center;justify-content:center;
+}
+.acard-icon i{font-size:15px;color:var(--accent2);}
+.acard-icon.teal-bg{background:rgba(6,182,212,0.12);}
+.acard-icon.teal-bg i{color:var(--teal);}
+.acard-icon.pink-bg{background:rgba(236,72,153,0.12);}
+.acard-icon.pink-bg i{color:var(--pink);}
+.acard-icon.gold-bg{background:rgba(251,191,36,0.12);}
+.acard-icon.gold-bg i{color:#fbbf24;}
 .acard-title{font-size:13px;font-weight:700;margin-bottom:2px;}
 .acard-sub{font-size:11px;color:var(--muted);}
 .highlight-box{
@@ -115,7 +126,16 @@ nav{
   padding:22px;transition:transform .2s,border-color .2s;
 }
 .skill-card:hover{transform:translateY(-4px);border-color:var(--accent2);}
-.skill-icon{font-size:26px;margin-bottom:10px;}
+.skill-icon-wrap{
+  width:44px;height:44px;border-radius:10px;margin-bottom:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(139,92,246,0.12);
+}
+.skill-icon-wrap i{font-size:18px;color:var(--accent2);}
+.skill-icon-wrap.teal{background:rgba(6,182,212,0.12);}
+.skill-icon-wrap.teal i{color:var(--teal);}
+.skill-icon-wrap.pink{background:rgba(236,72,153,0.12);}
+.skill-icon-wrap.pink i{color:var(--pink);}
 .skill-cat{font-size:13px;font-weight:700;margin-bottom:10px;}
 .skill-tags{display:flex;flex-wrap:wrap;gap:6px;}
 .tag{background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);color:var(--accent2);font-size:11px;padding:3px 9px;border-radius:20px;}
@@ -130,7 +150,8 @@ nav{
 }
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,var(--accent),var(--teal));}
 .proj-card:hover{transform:translateY(-4px);border-color:var(--accent);}
-.proj-badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;}
+.proj-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;}
+.proj-badge i{font-size:9px;}
 .badge-ml{background:rgba(139,92,246,0.15);color:var(--accent2);}
 .badge-data{background:rgba(6,182,212,0.15);color:var(--teal);}
 .badge-hci{background:rgba(236,72,153,0.15);color:var(--pink);}
@@ -145,11 +166,17 @@ nav{
 .contact-info{display:flex;flex-direction:column;gap:14px;}
 .citem{
   background:var(--card);border:1px solid var(--border);border-radius:12px;
-  padding:16px 18px;display:flex;align-items:center;gap:12px;
+  padding:16px 18px;display:flex;align-items:center;gap:14px;
   text-decoration:none;transition:border-color .2s;
 }
 .citem:hover{border-color:var(--accent2);}
-.citem-icon{font-size:18px;flex-shrink:0;}
+.citem-icon{
+  width:38px;height:38px;border-radius:8px;flex-shrink:0;
+  background:rgba(139,92,246,0.12);display:flex;align-items:center;justify-content:center;
+}
+.citem-icon i{font-size:15px;color:var(--accent2);}
+.citem-icon.teal{background:rgba(6,182,212,0.12);}
+.citem-icon.teal i{color:var(--teal);}
 .citem-label{font-size:10px;color:var(--muted);margin-bottom:2px;}
 .citem-val{font-size:13px;color:var(--text);font-weight:600;}
 .contact-msg{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;}
@@ -163,7 +190,6 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
 .fade{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
 .fade.visible{opacity:1;transform:none;}
 
-/* ===== TABLET (max 900px) ===== */
 @media(max-width:900px){
   .about-grid{grid-template-columns:1fr;}
   .skills-grid{grid-template-columns:repeat(2,1fr);}
@@ -173,36 +199,23 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
   .hero-desc{margin:0 auto 28px;}
   .hero-btns{justify-content:center;}
   .hero-stats{justify-content:center;}
-  .hero-right{margin-bottom:16px;}
 }
-
-/* ===== MOBILE (max 600px) ===== */
 @media(max-width:600px){
   .nav-links{display:none;}
   .hamburger{display:flex;}
   .sec{padding:60px 5%;}
   .skills-grid{grid-template-columns:1fr;}
   .hero-stats{gap:20px;}
-  .stat-n{font-size:22px;}
-  .acard{flex-direction:row;align-items:flex-start;}
-  .hero-badge{font-size:11px;}
   .line{margin:14px 0 32px;}
-  .about-p{font-size:13px;}
-  .proj-desc{font-size:12px;}
-  .contact-msg{padding:20px;}
 }
-
-/* ===== SMALL MOBILE (max 380px) ===== */
 @media(max-width:380px){
   .hero-btns{flex-direction:column;}
   .btn-p,.btn-o{text-align:center;}
-  .hero-stats{flex-wrap:wrap;gap:16px;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo">Ritika G M</div>
   <ul class="nav-links">
@@ -212,12 +225,11 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home" onclick="closeMenu()">Home</a>
   <a href="#about" onclick="closeMenu()">About</a>
@@ -234,8 +246,8 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
     <p class="hero-role">SAP Consultant · CS Engineer · HCI Enthusiast</p>
     <p class="hero-desc">B.Tech CSE graduate with 2+ years at LTIMindtree. Passionate about intelligent, human-centred design. Applying for M.Sc. Human Computer Interaction in Germany.</p>
     <div class="hero-btns">
-      <a href="#projects" class="btn-p">View Projects</a>
-      <a href="#contact" class="btn-o">Get In Touch</a>
+      <a href="#projects" class="btn-p"><i class="fa-solid fa-briefcase" style="margin-right:7px"></i>View Projects</a>
+      <a href="#contact" class="btn-o"><i class="fa-solid fa-envelope" style="margin-right:7px"></i>Get In Touch</a>
     </div>
     <div class="hero-stats">
       <div><div class="stat-n">7.65</div><div class="stat-l">B.Tech CGPA</div></div>
@@ -245,7 +257,11 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
     </div>
   </div>
   <div class="hero-right">
-    <div class="avatar-wrap"><div class="avatar-inner">👩‍💻</div></div>
+    <div class="avatar-wrap">
+      <div class="avatar-inner">
+        <i class="fa-solid fa-user-graduate"></i>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -265,12 +281,12 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
         </div>
       </div>
       <div class="about-cards">
-        <div class="acard"><div class="acard-icon">🎓</div><div><div class="acard-title">B.Tech — CSE</div><div class="acard-sub">Dayananda Sagar University · CGPA: 7.65 · 2023</div></div></div>
-        <div class="acard"><div class="acard-icon">💼</div><div><div class="acard-title">SAP Consultant</div><div class="acard-sub">LTIMindtree, Bengaluru · 2023–Present</div></div></div>
-        <div class="acard"><div class="acard-icon">🌍</div><div><div class="acard-title">Applying — M.Sc. HCI</div><div class="acard-sub">Germany · Winter Semester 2026</div></div></div>
-        <div class="acard"><div class="acard-icon">🗣️</div><div><div class="acard-title">Languages</div><div class="acard-sub">English (IELTS 6.5) · Telugu · Hindi · German A1</div></div></div>
-        <div class="acard"><div class="acard-icon">📍</div><div><div class="acard-title">Location</div><div class="acard-sub">Bengaluru, Karnataka, India</div></div></div>
-        <div class="acard"><div class="acard-icon">🏆</div><div><div class="acard-title">Awards</div><div class="acard-sub">Star Performer · Hi-Five · 3× Super Crew</div></div></div>
+        <div class="acard"><div class="acard-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><div class="acard-title">B.Tech — CSE</div><div class="acard-sub">Dayananda Sagar University · CGPA: 7.65 · 2023</div></div></div>
+        <div class="acard"><div class="acard-icon teal-bg"><i class="fa-solid fa-briefcase"></i></div><div><div class="acard-title">SAP Consultant</div><div class="acard-sub">LTIMindtree, Bengaluru · 2023–Present</div></div></div>
+        <div class="acard"><div class="acard-icon pink-bg"><i class="fa-solid fa-earth-europe"></i></div><div><div class="acard-title">Applying — M.Sc. HCI</div><div class="acard-sub">Germany · Winter Semester 2026</div></div></div>
+        <div class="acard"><div class="acard-icon gold-bg"><i class="fa-solid fa-language"></i></div><div><div class="acard-title">Languages</div><div class="acard-sub">English (IELTS 6.5) · Telugu · Hindi · German A1</div></div></div>
+        <div class="acard"><div class="acard-icon teal-bg"><i class="fa-solid fa-location-dot"></i></div><div><div class="acard-title">Location</div><div class="acard-sub">Bengaluru, Karnataka, India</div></div></div>
+        <div class="acard"><div class="acard-icon"><i class="fa-solid fa-trophy"></i></div><div><div class="acard-title">Awards</div><div class="acard-sub">Star Performer · Hi-Five · 3× Super Crew</div></div></div>
       </div>
     </div>
   </div>
@@ -283,12 +299,12 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
     <h2 class="sec-h">Skills &amp; <span>Expertise</span></h2>
     <div class="line"></div>
     <div class="skills-grid">
-      <div class="skill-card"><div class="skill-icon">💻</div><div class="skill-cat">Programming</div><div class="skill-tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">JavaScript</span></div></div>
-      <div class="skill-card"><div class="skill-icon">🤖</div><div class="skill-cat">AI / Machine Learning</div><div class="skill-tags"><span class="tag teal">Machine Learning</span><span class="tag teal">Deep Learning</span><span class="tag teal">NLP</span><span class="tag teal">Data Science</span></div></div>
-      <div class="skill-card"><div class="skill-icon">🖥️</div><div class="skill-cat">HCI &amp; Design</div><div class="skill-tags"><span class="tag pink">User Research</span><span class="tag pink">UX Design</span><span class="tag pink">Usability</span><span class="tag pink">Accessibility</span></div></div>
-      <div class="skill-card"><div class="skill-icon">🗄️</div><div class="skill-cat">Databases &amp; Analytics</div><div class="skill-tags"><span class="tag">MySQL</span><span class="tag">SAP HANA</span><span class="tag">Data Visualisation</span></div></div>
-      <div class="skill-card"><div class="skill-icon">⚙️</div><div class="skill-cat">Enterprise IT (SAP)</div><div class="skill-tags"><span class="tag teal">SAP S/4HANA</span><span class="tag teal">SAP Basis</span><span class="tag teal">System Migration</span></div></div>
-      <div class="skill-card"><div class="skill-icon">🌐</div><div class="skill-cat">Web &amp; Software Eng.</div><div class="skill-tags"><span class="tag">HTML/CSS</span><span class="tag">Flask</span><span class="tag">SDLC</span><span class="tag">Git</span></div></div>
+      <div class="skill-card"><div class="skill-icon-wrap"><i class="fa-solid fa-code"></i></div><div class="skill-cat">Programming</div><div class="skill-tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">JavaScript</span></div></div>
+      <div class="skill-card"><div class="skill-icon-wrap teal"><i class="fa-solid fa-brain"></i></div><div class="skill-cat">AI / Machine Learning</div><div class="skill-tags"><span class="tag teal">Machine Learning</span><span class="tag teal">Deep Learning</span><span class="tag teal">NLP</span><span class="tag teal">Data Science</span></div></div>
+      <div class="skill-card"><div class="skill-icon-wrap pink"><i class="fa-solid fa-desktop"></i></div><div class="skill-cat">HCI &amp; Design</div><div class="skill-tags"><span class="tag pink">User Research</span><span class="tag pink">UX Design</span><span class="tag pink">Usability</span><span class="tag pink">Accessibility</span></div></div>
+      <div class="skill-card"><div class="skill-icon-wrap"><i class="fa-solid fa-database"></i></div><div class="skill-cat">Databases &amp; Analytics</div><div class="skill-tags"><span class="tag">MySQL</span><span class="tag">SAP HANA</span><span class="tag">Data Visualisation</span></div></div>
+      <div class="skill-card"><div class="skill-icon-wrap teal"><i class="fa-solid fa-server"></i></div><div class="skill-cat">Enterprise IT (SAP)</div><div class="skill-tags"><span class="tag teal">SAP S/4HANA</span><span class="tag teal">SAP Basis</span><span class="tag teal">System Migration</span></div></div>
+      <div class="skill-card"><div class="skill-icon-wrap pink"><i class="fa-solid fa-globe"></i></div><div class="skill-cat">Web &amp; Software Eng.</div><div class="skill-tags"><span class="tag pink">HTML/CSS</span><span class="tag pink">Flask</span><span class="tag pink">SDLC</span><span class="tag pink">Git</span></div></div>
     </div>
   </div>
 </section>
@@ -300,12 +316,12 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
     <h2 class="sec-h">Featured <span>Projects</span></h2>
     <div class="line"></div>
     <div class="projects-grid">
-      <div class="proj-card"><span class="proj-badge badge-ml">ML · Healthcare</span><div class="proj-title">Thyroid Disorder Detection using Machine Learning</div><div class="proj-desc">Final year B.Tech thesis. Built an ML classification system for thyroid conditions using patient health data. Focused on model interpretability for non-technical healthcare users — an early interest in HCI for medical systems.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">ML</span><span class="stack-tag">Healthcare Data</span><span class="stack-tag">Classification</span></div></div>
-      <div class="proj-card"><span class="proj-badge badge-data">Enterprise Analytics</span><div class="proj-title">SAP S/4HANA Performance Optimisation</div><div class="proj-desc">Professional project at LTIMindtree. Analysed SAP system bottlenecks and implemented optimisations resulting in 20% performance improvement. Applied usability thinking to make complex dashboards more intuitive for administrators.</div><div class="proj-stack"><span class="stack-tag">SAP HANA</span><span class="stack-tag">System Analytics</span><span class="stack-tag">Performance Tuning</span></div></div>
-      <div class="proj-card"><span class="proj-badge badge-hci">NLP · HCI</span><div class="proj-title">Natural Language Processing — Text Analytics</div><div class="proj-desc">Academic project (Grade: A). Built a text processing pipeline covering tokenisation, POS tagging, sentiment analysis, and language modelling. Explored NLP as a bridge for more natural human-computer interaction.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Sentiment Analysis</span></div></div>
-      <div class="proj-card"><span class="proj-badge badge-data">Networks · Data</span><div class="proj-title">Social Networks and Analytics</div><div class="proj-desc">Academic project (Grade: O — Outstanding, 10/10). Analysed social network graphs using statistical and probabilistic models. Applied community detection and influence maximisation to understand information propagation.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">Graph Theory</span><span class="stack-tag">Statistics</span></div></div>
-      <div class="proj-card"><span class="proj-badge badge-ent">Enterprise IT</span><div class="proj-title">S/4HANA Production Migration — Zero Downtime</div><div class="proj-desc">Professional project at LTIMindtree. Executed a zero-downtime SAP S/4HANA migration across complex enterprise landscapes. Coordinated cross-functional teams. Received Star Performer Award for this initiative.</div><div class="proj-stack"><span class="stack-tag">SAP S/4HANA</span><span class="stack-tag">Migration</span><span class="stack-tag">Project Management</span></div></div>
-      <div class="proj-card"><span class="proj-badge badge-ml">Database · UX</span><div class="proj-title">Database Systems — Accessible Interface Design</div><div class="proj-desc">Academic project (Grade: B+). Designed relational database systems with complex SQL, normalisation and ER modelling. Explored how database interfaces can be made more accessible to non-technical users.</div><div class="proj-stack"><span class="stack-tag">SQL</span><span class="stack-tag">MySQL</span><span class="stack-tag">Database Design</span></div></div>
+      <div class="proj-card"><span class="proj-badge badge-ml"><i class="fa-solid fa-heart-pulse"></i> ML · Healthcare</span><div class="proj-title">Thyroid Disorder Detection using Machine Learning</div><div class="proj-desc">Final year B.Tech thesis. Built an ML classification system for thyroid conditions. Focused on model interpretability for non-technical healthcare users — an early interest in HCI for medical systems.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">ML</span><span class="stack-tag">Healthcare Data</span></div></div>
+      <div class="proj-card"><span class="proj-badge badge-data"><i class="fa-solid fa-chart-line"></i> Enterprise Analytics</span><div class="proj-title">SAP S/4HANA Performance Optimisation</div><div class="proj-desc">Professional project at LTIMindtree. Analysed SAP system bottlenecks and implemented optimisations resulting in 20% performance improvement. Applied usability thinking to make complex dashboards more intuitive.</div><div class="proj-stack"><span class="stack-tag">SAP HANA</span><span class="stack-tag">System Analytics</span><span class="stack-tag">Performance Tuning</span></div></div>
+      <div class="proj-card"><span class="proj-badge badge-hci"><i class="fa-solid fa-comment-dots"></i> NLP · HCI</span><div class="proj-title">Natural Language Processing — Text Analytics</div><div class="proj-desc">Academic project (Grade: A). Built a text processing pipeline covering tokenisation, POS tagging, and sentiment analysis. Explored NLP as a bridge for more natural human-computer interaction.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Sentiment Analysis</span></div></div>
+      <div class="proj-card"><span class="proj-badge badge-data"><i class="fa-solid fa-diagram-project"></i> Networks · Data</span><div class="proj-title">Social Networks and Analytics</div><div class="proj-desc">Academic project (Grade: O — Outstanding, 10/10). Analysed social network graphs using statistical and probabilistic models. Applied community detection and influence maximisation algorithms.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">Graph Theory</span><span class="stack-tag">Statistics</span></div></div>
+      <div class="proj-card"><span class="proj-badge badge-ent"><i class="fa-solid fa-arrow-right-arrow-left"></i> Enterprise IT</span><div class="proj-title">S/4HANA Production Migration — Zero Downtime</div><div class="proj-desc">Professional project at LTIMindtree. Executed a zero-downtime SAP S/4HANA migration across complex enterprise landscapes. Coordinated cross-functional teams. Received Star Performer Award.</div><div class="proj-stack"><span class="stack-tag">SAP S/4HANA</span><span class="stack-tag">Migration</span><span class="stack-tag">Project Management</span></div></div>
+      <div class="proj-card"><span class="proj-badge badge-ml"><i class="fa-solid fa-table"></i> Database · UX</span><div class="proj-title">Database Systems — Accessible Interface Design</div><div class="proj-desc">Academic project (Grade: B+). Designed relational database systems with complex SQL and ER modelling. Explored how database interfaces can be made more accessible to non-technical users.</div><div class="proj-stack"><span class="stack-tag">SQL</span><span class="stack-tag">MySQL</span><span class="stack-tag">Database Design</span></div></div>
     </div>
   </div>
 </section>
@@ -318,10 +334,10 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
     <div class="line"></div>
     <div class="contact-wrap">
       <div class="contact-info">
-        <a class="citem" href="mailto:ritikameena1980@gmail.com"><div class="citem-icon">📧</div><div><div class="citem-label">Email</div><div class="citem-val">ritikameena1980@gmail.com</div></div></a>
-        <a class="citem" href="https://www.linkedin.com/in/ritika-g-m-1aba58235" target="_blank"><div class="citem-icon">🔗</div><div><div class="citem-label">LinkedIn</div><div class="citem-val">linkedin.com/in/ritika-g-m</div></div></a>
-        <div class="citem"><div class="citem-icon">📍</div><div><div class="citem-label">Location</div><div class="citem-val">Bengaluru, Karnataka, India</div></div></div>
-        <div class="citem"><div class="citem-icon">🎓</div><div><div class="citem-label">Applying For</div><div class="citem-val">M.Sc. HCI — Germany 2026</div></div></div>
+        <a class="citem" href="mailto:ritikameena1980@gmail.com"><div class="citem-icon"><i class="fa-solid fa-envelope"></i></div><div><div class="citem-label">Email</div><div class="citem-val">ritikameena1980@gmail.com</div></div></a>
+        <a class="citem" href="https://www.linkedin.com/in/ritika-g-m-1aba58235" target="_blank"><div class="citem-icon"><i class="fa-brands fa-linkedin-in"></i></div><div><div class="citem-label">LinkedIn</div><div class="citem-val">linkedin.com/in/ritika-g-m</div></div></a>
+        <div class="citem"><div class="citem-icon teal"><i class="fa-solid fa-location-dot"></i></div><div><div class="citem-label">Location</div><div class="citem-val">Bengaluru, Karnataka, India</div></div></div>
+        <div class="citem"><div class="citem-icon teal"><i class="fa-solid fa-graduation-cap"></i></div><div><div class="citem-label">Applying For</div><div class="citem-val">M.Sc. HCI — Germany 2026</div></div></div>
       </div>
       <div class="contact-msg">
         <h3>Why HCI?</h3>
@@ -338,18 +354,10 @@ footer span{background:linear-gradient(135deg,var(--accent2),var(--teal));-webki
 </footer>
 
 <script>
-  // Scroll fade
   const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.08});
   document.querySelectorAll('.fade').forEach(el => obs.observe(el));
-
-  // Mobile menu
-  function toggleMenu(){
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function closeMenu(){
-    document.getElementById('mobileMenu').classList.remove('open');
-  }
-  // Close on outside click
+  function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu(){ document.getElementById('mobileMenu').classList.remove('open'); }
   document.addEventListener('click', e => {
     const menu = document.getElementById('mobileMenu');
     const ham = document.querySelector('.hamburger');
